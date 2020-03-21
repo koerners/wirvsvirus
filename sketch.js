@@ -1,7 +1,7 @@
 const COLORS = [
-    [0, 172, 193],          // susceptible
+    [255, 255, 255],          // susceptible
     [255, 179, 0],          // exposed
-    [213, 0, 0],            // infected
+    [139, 0, 0],            // infected
     [85, 139, 47],          // recovered
 ];
 var E_RADIUS = 8;           // particle radius
@@ -99,7 +99,7 @@ function reset() {
     let ids = ['s0', 'e0', 'i0', 'r0'];
     let size = 50 * parseInt(stadtGroesse);
     console.log(size);
-    let idsV = [size, 10, 10, 5];
+    let idsV = [size, size*0.1, size*0.05, 5];
 
     population = [];
     for (let i = 0; i < ids.length; i++) {
@@ -110,7 +110,7 @@ function reset() {
 
     // Set transitions
     ids = ['ds', 'de', 'di', 'dr'];
-    idV = [0.1, 1, 0.005, 0];
+    idV = [0.1, 0.03, 0.005, 0.001];
 
 
     let t = [];

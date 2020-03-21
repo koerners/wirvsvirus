@@ -40,7 +40,9 @@ class Entity {
     }
 
     draw() {
-        noStroke();
+        //noStroke();
+        stroke(0);
+
         ellipseMode(RADIUS);
         if (showRadius) {
             fill('black');
