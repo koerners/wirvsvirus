@@ -1,5 +1,5 @@
 # #WirVsVirus
-Im Rahmen des [#WirVsVirus Hackathons der Bundesregierung](https://wirvsvirushackathon.org/)  entstandene Aufklärungswebseite, welche anhand einer kleinen Simulation die sozialverträglichkeit des eigenen Verhaltens bei eineer Pandemie aufzeigt.
+Im Rahmen des [#WirVsVirus Hackathons der Bundesregierung](https://wirvsvirushackathon.org/)  entstandene Aufklärungswebseite, welche anhand einer kleinen Simulation die sozialverträglichkeit des eigenen Verhaltens bei einer Pandemie aufzeigt.
 
 ## Screenshots
 ## [Live Demo](https://koerners.github.io/wirvsvirus/)
