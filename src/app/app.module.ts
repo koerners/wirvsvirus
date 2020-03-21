@@ -16,6 +16,8 @@ import { LoadingScreenComponent } from './loading-screen/loading-screen.componen
 import {LoadingScreenInterceptor} from "./loading.interceptor";
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { QuestionaryComponent } from './questionary/questionary.component';
+import { SimulationComponent } from './simulation/simulation.component';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { QuestionaryComponent } from './questionary/questionary.component';
     LoadingScreenComponent,
     DashboardComponent,
     QuestionaryComponent,
+    SimulationComponent,
   ],
   imports: [
     BrowserModule,

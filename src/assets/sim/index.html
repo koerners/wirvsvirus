@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="xithiox">
+    <title>disease</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="scripts/lib/lz-string.min.js" defer></script>
+    <script src="scripts/lib/p5.min.js" defer></script>
+    <script src="scripts/utils.js" defer></script>
+    <script src="scripts/entity.js" defer></script>
+    <script src="scripts/sketch.js" defer></script>
+  </head>
+  <body>
+    <main id="sketch"></main>
+    <aside>
+      <h1>Werte</h1>
+
+      <h3>Person Radius</h3>
+      <p>Radius: <input type="number" id="e_r" value="8" min="0"></p>
+      <p>Infect: <input type="number" id="i_r" value="30" min="0"></p>
+
+      <h3>Population</h3>
+      <p>S<sub>0</sub>: <input type="number" id="s0" value="199" min="0"></p>
+      <p>E<sub>0</sub>: <input type="number" id="e0" value="0" min="0"></p>
+      <p>I<sub>0</sub>: <input type="number" id="i0" value="1" min="0"></p>
+      <p>R<sub>0</sub>: <input type="number" id="r0" value="0" min="0"></p>
+
+      <h3>Transitions</h3>
+      <p>S&rarr;E: <input type="number" id="ds" value="0.1" min="0" max="1" step="0.001"></p>
+      <p>E&rarr;I: <input type="number" id="de" value="1" min="0" max="1" step="0.001"></p>
+      <p>I&rarr;R: <input type="number" id="di" value="0.005" min="0" max="1" step="0.001"></p>
+      <p>R&rarr;S: <input type="number" id="dr" value="0" min="0" max="1" step="0.001"></p>
+
+      <p>
+        <button onclick="reset()">Reset</button>
+      </p>
+
+      <p>
+        <button onclick="graphType++;if(graphType>2)graphType=0">Graph ändern</button>
+      </p>
+      <p>
+        <button onclick="showRadius=!showRadius">Radius zeigen</button>
+      </p>
+    </aside>
+  </body>
+</html>
