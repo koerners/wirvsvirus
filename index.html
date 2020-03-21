@@ -7,16 +7,17 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="utils.js"></script>
 	<script src="entity.js"></script>
 	<script src="sketch.js"></script>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 
 <body class="is-preload">
@@ -28,9 +29,9 @@
 		<section
 			class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 			<div class="content">
-				<h1>Auf mich kommt es doch gar nicht an!</h1>
-				<p class="major">Ich als einzelne Person kann gar keinen Einfluss auf die Ausbreitung eines Viruses
-					haben - es macht also auch keinen Unterschied wie ich mich verhalte. </a></p>
+				<h1>Was kann ich denn schon tun?</h1>
+				<p class="major">"Ich als einzelne Person kann gar keinen Einfluss auf die Ausbreitung von Corona
+					haben - es macht also auch keinen Unterschied wie ich mich verhalte." <br> - <i>Frau mittleren Alters in der Münchner U-Bahn</i> </p>
 				<ul class="actions stacked">
 					<li><a href="#dcount" class="button big wide smooth-scroll-middle">Oder etwa doch?</a></li>
 				</ul>
@@ -52,14 +53,15 @@
 				<br>
 
 				<h2>
-					<div style="color: darkred;" id="tote"></div> sind daran gestorben.
+					<div style="color: darkred;" id="tote"></div> sind bereits gestorben.
 				</h2>
 
 
 				<br>
 				<br>
 				<ul class="actions stacked">
-					<li><a href="#first" class="button big wide smooth-scroll-middle">Was hat das mit mir zu tun?</a></li>
+					<li><a href="#first" class="button big wide smooth-scroll-middle">Was hat das mit mir zu tun?</a>
+					</li>
 				</ul>
 			</div>
 			<div class="image">
@@ -73,7 +75,8 @@
 			<div class="content">
 				<h2>Jeder Einzelne zählt!</h2>
 				<p>Wir Menschen neigen dazu unseren eigenen Einfluss auf die Dinge ganz wie es uns am besten passt mal
-					größer und mal kleiner zu reden. Wenn jeder so denken und handeln würde wie du - wie würde sich der der Virus ausbreiten?</p>
+					größer und mal kleiner zu reden. Wenn jeder so denken und handeln würde wie du - wie würde sich
+					der Virus ausbreiten?</p>
 				<ul class="actions stacked">
 					<li><a href="#q1" class="button big wide smooth-scroll-middle">Beginne deinen Test</a></li>
 				</ul>
@@ -249,11 +252,11 @@
 				</p>
 				<div id="sketch-holder" style="width: 100%; height: 600px;">
 					<!-- Our sketch will go here! -->
-				</div> 
+				</div>
 
 				<br>
 				<a class="button icon solid fa-play" onclick="reset()"> Von Beginn</a>
-				<a class="button smooth-scroll-middle icon solid fa-redo"  href="#q1"> Ändere deine Antworten</a>
+				<a class="button smooth-scroll-middle icon solid fa-redo" href="#q1"> Ändere deine Antworten</a>
 
 
 
@@ -268,34 +271,43 @@
 						<section>
 							<span class="icon solid style2 major fa-ruler"></span>
 							<h3>Abstand</h3>
-							<p>Halte ausreichend Abstand von Menschen, die Husten, Schnupfen oder Fieber haben – auch aufgrund der andauernden Grippe- und Erkältungswelle.</p>
+							<p>Halte ausreichend Abstand von Menschen, die Husten, Schnupfen oder Fieber haben – auch
+								aufgrund der andauernden Grippe- und Erkältungswelle.</p>
 						</section>
 						<section>
 							<span class="icon solid style2 major fa-medkit"></span>
 							<h3>Rücksicht</h3>
-							<p>Niese oder huste in die Armbeuge oder in ein Taschentuch – und entsorge das Taschentuch anschließend in einem Mülleimer mit Deckel.</p>
+							<p>Niese oder huste in die Armbeuge oder in ein Taschentuch – und entsorge das Taschentuch
+								anschließend in einem Mülleimer mit Deckel.</p>
 						</section>
 						<section>
 							<span class="icon solid style2 major fa-sign-language"></span>
 							<h3>Hygiene</h3>
-							<p>Wasche dir regelmäßig und ausreichendlange (mindestens 20 Sekunden) die Hände mit Wasser und Seife –  insbesondere nach dem Naseputzen, Niesen oder Husten.</p>
+							<p>Wasche dir regelmäßig und ausreichendlange (mindestens 20 Sekunden) die Hände mit Wasser
+								und Seife – insbesondere nach dem Naseputzen, Niesen oder Husten.</p>
 						</section>
 						<section>
 							<span class="icon solid style2 major fa-hand-paper"></span>
 							<h3>Hände weg!</h3>
-							<p>Halte die Hände vom Gesicht fern – vermeide es, mit den Händen Mund, Augen oder Nase zu berühren.</p>
+							<p>Halte die Hände vom Gesicht fern – vermeide es, mit den Händen Mund, Augen oder Nase zu
+								berühren.</p>
 						</section>
 						<section>
 							<span class="icon solid style2 major fa-eye"></span>
 							<h3>Erkennen</h3>
-							<p>Erste Krankheitszeichen sind Husten, Schnupfen, Halskratzen und Fieber.  Einige  Betroffene leiden zudem an Durchfall. Bei einem schweren Verlauf können Atemprobleme oder eine Lungenentzündung eintreten. Nach einer Ansteckung  können Krankheitssymptome bis zu 14 Tage später auftreten</p>
+							<p>Erste Krankheitszeichen sind Husten, Schnupfen, Halskratzen und Fieber. Einige Betroffene
+								leiden zudem an Durchfall. Bei einem schweren Verlauf können Atemprobleme oder eine
+								Lungenentzündung eintreten. Nach einer Ansteckung können Krankheitssymptome bis zu 14
+								Tage später auftreten</p>
 						</section>
 						<section>
 							<span class="icon solid style2 major fa-phone"></span>
 							<h3>Handeln</h3>
-							<p>Wenn du die Symptome zeigst, kontaktiere deinen Hausarzt per Telefon oder wende dich an die Nummer 116 117 und besprich das weitere Vorgehen, bevor du du in die Praxis gehst.</p>
+							<p>Wenn du die Symptome zeigst, kontaktiere deinen Hausarzt per Telefon oder wende dich an
+								die Nummer 116 117 und besprich das weitere Vorgehen, bevor du du in die Praxis gehst.
+							</p>
 						</section>
-			
+
 					</div>
 				</div>
 			</section>
@@ -307,9 +319,11 @@
 			<!-- Footer -->
 			<footer class="wrapper style1 align-center">
 				<div class="inner">
-						<p>Diese Webseite ist im Rahmen des #WirVsVirus Hackathons der Bundesregierung Deutschland entstanden. <br>
+					<p>Diese Webseite ist im Rahmen des #WirVsVirus Hackathons der Bundesregierung Deutschland
+						entstanden. <br>
 						Sämtliche Angaben sind nach bestem Wissen und Gewissen geprüft aber ohne jede Gewähr.</p>
-						<p>&copy; <a href="https://skoerner.com">Stefan Körner</a> &amp; <a href="https://www.mboehm.dev/"> Moritz Böhm </a><br> <a href="https://skoerner.com/#impressum">Impressum</a> </p>
+					<p>&copy; <a href="https://skoerner.com">Stefan Körner</a> &amp; <a href="https://www.mboehm.dev/">
+							Moritz Böhm </a><br> <a href="https://skoerner.com/#impressum">Impressum</a> </p>
 				</div>
 			</footer>
 
