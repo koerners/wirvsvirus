@@ -101,7 +101,7 @@ function randomEntities(states) {
 function reset() {
 
     kontakte = $("input:radio[name=kontakte]:checked").val()
-    speed = 0.2 + (kontakte*1.5);
+    speed = 0.2 + (kontakte);
     console.log(speed);
     stadtGroesse = $("input:radio[name=stadt]:checked").val()
 
