@@ -25,40 +25,21 @@ var graphType = 0;          // 0 = line graph, 1 = pie chart, 2 = none
 var showRadius = false;     // whether to display infection radius
 
 
+let radius_e_q ,
+  radius_i_q ,
+S0_q,
+E0_q ,
+I0_q ,
+R0_q;
+
+
 
 
 /*
  * Other functions
  */
 
-// Return scenario string
-function exportScenario() {
-    return LZString.compressToBase64(JSON.stringify({
-        e_radius: E_RADIUS,
-        i_radius: I_RADIUS,
-        i_chance: I_CHANCE,
-        transitions: TRANSITIONS,
-        population: population
-    }));
-}
 
-// Import scenario from a scenario string
-function importScenario(str) {
-    try {
-        let custom = JSON.parse(LZString.decompressFromBase64(str));
-        document.getElementById('e_r').value = custom.e_radius;
-        document.getElementById('i_r').value = custom.i_radius;
-        document.getElementById('ds').value = custom.i_chance;
-        document.getElementById('de').value = custom.transitions[0];
-        document.getElementById('di').value = custom.transitions[1];
-        document.getElementById('dr').value = custom.transitions[2];
-        document.getElementById('s0').value = custom.population[0];
-        document.getElementById('e0').value = custom.population[1];
-        document.getElementById('i0').value = custom.population[2];
-        document.getElementById('r0').value = custom.population[3];
-        reset();
-    } catch (err) {}
-}
 
 // Draws a line graph of all entities
 function lineGraph() {
@@ -162,6 +143,15 @@ function reset() {
  */
 
 function setup() {
+
+    radius_e_q = localStorage.getItem('rE');
+    radius_i_q = localStorage.getItem('rI');
+    S0_q = localStorage.getItem('s0');
+    E0_q = localStorage.getItem('e0');
+    I0_q = localStorage.getItem('i0');
+    R0_q = localStorage.getItem('r0');
+
+
     let m = document.getElementById('sketch');
     let canvas = createCanvas(m.offsetWidth, m.offsetHeight);
     canvas.parent(m);
