@@ -26,7 +26,7 @@ var showRadius = false;     // whether to display infection radius
 
 
 
-var kontakte, stadtGroesse, speed;
+var kontakte, stadtGroesse, speed, hygy, reise;
 
 
 
@@ -62,27 +62,7 @@ function lineGraph() {
     line(hist.length, 25, hist.length, 175);
 }
 
-// Draws a pie chart of all entities
-function pieChart() {
-    let results = countStates();
-    let states = results[0];
-    let total = results[1];
 
-    // Draw pie chart
-    let radius = 75;
-    let lastAngle = 0;
-    for (let i = 0; i < states.length; i++) {
-        let angle = states[i] / total * TWO_PI;
-        if (angle === 0) continue;
-
-        // Arc
-        fill(COLORS[i].concat(191));
-        noStroke();
-        ellipseMode(RADIUS);
-        arc(100, 100, radius, radius, lastAngle, lastAngle + angle);
-        lastAngle += angle;
-    }
-}
 
 // Fills map randomly with entities of each state
 // Requires an array of SEIR
@@ -100,22 +80,24 @@ function randomEntities(states) {
 // Resets map
 function reset() {
 
-    kontakte = $("input:radio[name=kontakte]:checked").val()
-    speed = 0.2 + (kontakte);
-    console.log(speed);
-    stadtGroesse = $("input:radio[name=stadt]:checked").val()
+    kontakte = $("input:radio[name=kontakte]:checked").val();
+    speed = 0.2 + parseInt(kontakte);
+    stadtGroesse = $("input:radio[name=stadt]:checked").val();
+    hygy = $("input:radio[name=hy]:checked").val();
+    reise = $("input:radio[name=fb]:checked").val();
+
 
     // Set entity radius
-    let e = 4
+    let e = 50/parseInt(stadtGroesse);
     E_RADIUS = e > 0 ? e : 1;
 
     // Set infection radius
-    let r = 30
+    let r = 9 + 5*parseInt(hygy);
     I_RADIUS = r >= 0 ? r : 0;
 
     // Set initial population
     let ids = ['s0', 'e0', 'i0', 'r0'];
-    let size = 100 * parseInt(stadtGroesse);
+    let size = 50 * parseInt(stadtGroesse);
     console.log(size);
     let idsV = [size, 10, 10, 5];
 
@@ -168,9 +150,6 @@ function setup() {
   function draw() {
     background('lightgrey');
 
- 
-
-
 
     hist.push(countStates()[0]);
     if (hist.length > maxHist) hist.shift();
@@ -179,11 +158,8 @@ function setup() {
         entities[i].act();
     }
 
-    if (graphType === 0) {
         lineGraph();
-    } else if (graphType === 1) {
-        pieChart();
-    }
+
 
 
 

@@ -43,7 +43,7 @@ class Entity {
         noStroke();
         ellipseMode(RADIUS);
         if (showRadius) {
-            fill('lightgray');
+            fill('black');
             ellipse(this.pos.x, this.pos.y, I_RADIUS, I_RADIUS);
         }
         fill(COLORS[this.state]);
