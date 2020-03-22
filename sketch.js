@@ -131,9 +131,9 @@ function setup() {
     var canvas =  createCanvas(document.getElementById("sketch-holder").offsetWidth, document.getElementById("sketch-holder").offsetHeight);
     canvas.parent('sketch-holder');
 
-    $.ajax({url: "https://coronavirus-tracker-api.herokuapp.com/v2/locations?country_code=DE", success: function(result){
-        let infizierte = result.locations["0"].latest.confirmed;
-        let tote = result.locations["0"].latest.deaths;
+    $.ajax({url: "https://coronavirus-19-api.herokuapp.com/countries/Germany", success: function(result){
+        let infizierte = result.active;
+        let tote = result.deaths
         document.getElementById("infiz").innerHTML = infizierte;
         document.getElementById("tote").innerHTML = tote;
 
