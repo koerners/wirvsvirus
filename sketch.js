@@ -27,6 +27,7 @@ var showRadius = false;     // whether to display infection radius
 
 
 var kontakte, stadtGroesse, speed, hygy, reise;
+var canvas;
 
 
 
@@ -125,10 +126,14 @@ function reset() {
     count = countStates()[1];
 }
 
+function windowResized() {
+  canvas.resizeCanvas(document.getElementById("sketch-holder").offsetWidth, document.getElementById("sketch-holder").offsetHeight);
+}
+
 
 
 function setup() {
-    var canvas =  createCanvas(document.getElementById("sketch-holder").offsetWidth, document.getElementById("sketch-holder").offsetHeight);
+    canvas =  createCanvas(document.getElementById("sketch-holder").offsetWidth, document.getElementById("sketch-holder").offsetHeight);
     canvas.parent('sketch-holder');
 
     $.ajax({url: "https://coronavirus-19-api.herokuapp.com/countries/Germany", success: function(result){
